@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191118 10:49:39.853" generator="Robot 3.1.2 (Python 3.5.2 on linux)">
+<suite id="s1" name="Testcase" source="/home/tirthankar/PycharmProjects/Learn_01/Learn02/Testcase">
+<suite id="s1-s1" name="Book Search" source="/home/tirthankar/PycharmProjects/Learn_01/Learn02/Testcase/Book_Search.robot">
+<test id="s1-s1-t1" name="TC1">
+<kw type="setup" name="Launch_Browser_Navigate to url" library="Resources_01">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:39.986">Opening browser 'Chrome' to base url 'http://office.suratmunicipal.org/LMS/Search'.</msg>
+<status status="PASS" starttime="20191118 10:49:39.986" endtime="20191118 10:49:43.842"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20191118 10:49:43.842" endtime="20191118 10:49:43.959"></status>
+</kw>
+<status status="PASS" starttime="20191118 10:49:39.986" endtime="20191118 10:49:43.959"></status>
+</kw>
+<kw name="Book_Search_operation" library="Resources_01">
+<arguments>
+<arg>DR. CHINU MODI</arg>
+</arguments>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>${Library}</arg>
+<arg>${Library_select}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:43.962">Selecting options from selection list '//select[@id="drpLibrary"]' by label NARMAD CENTRAL LIBRARY.</msg>
+<status status="PASS" starttime="20191118 10:49:43.961" endtime="20191118 10:49:44.046"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${Classification}</arg>
+<arg>${Classification_select}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:44.047">Selecting options from selection list '//select[@id="drpClassification"]' by value 2.</msg>
+<status status="PASS" starttime="20191118 10:49:44.046" endtime="20191118 10:49:44.139"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>SearchBy</arg>
+<arg>Author Name</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:44.139">Selecting 'Author Name' from radio button 'SearchBy'.</msg>
+<status status="PASS" starttime="20191118 10:49:44.139" endtime="20191118 10:49:44.225"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Book_name}</arg>
+<arg>${Author}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:44.225">Typing text 'DR. CHINU MODI' into text field '//input[@id="txtSearchBy"]'.</msg>
+<status status="PASS" starttime="20191118 10:49:44.225" endtime="20191118 10:49:44.393"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Book_Search}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:44.394">Clicking button '//button[@id="btnSearch"]'.</msg>
+<status status="PASS" starttime="20191118 10:49:44.393" endtime="20191118 10:49:44.526"></status>
+</kw>
+<status status="PASS" starttime="20191118 10:49:43.960" endtime="20191118 10:49:44.526"></status>
+</kw>
+<kw type="teardown" name="Close_All_Test" library="Resources_01">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg level="INFO" timestamp="20191118 10:49:44.547">${Title} = Search - Online SMC Library</msg>
+<status status="PASS" starttime="20191118 10:49:44.527" endtime="20191118 10:49:44.547"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Title}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191118 10:49:44.547">Search - Online SMC Library</msg>
+<status status="PASS" starttime="20191118 10:49:44.547" endtime="20191118 10:49:44.547"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20191118 10:49:44.547" endtime="20191118 10:49:44.607"></status>
+</kw>
+<status status="PASS" starttime="20191118 10:49:44.527" endtime="20191118 10:49:44.607"></status>
+</kw>
+<status critical="yes" status="PASS" starttime="20191118 10:49:39.985" endtime="20191118 10:49:44.607"></status>
+</test>
+<status status="PASS" starttime="20191118 10:49:39.874" endtime="20191118 10:49:44.609"></status>
+</suite>
+<status status="PASS" starttime="20191118 10:49:39.854" endtime="20191118 10:49:44.611"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" id="s1" name="Testcase" fail="0">Testcase</stat>
+<stat pass="1" id="s1-s1" name="Book Search" fail="0">Testcase.Book Search</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="ERROR" timestamp="20191118 10:49:39.703">Error in file '/home/tirthankar/PycharmProjects/Learn_01/Learn02/Testcase/Book_Search.robot': Non-existing setting '--outputdir'.</msg>
+</errors>
+</robot>

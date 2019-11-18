@@ -1,0 +1,10 @@
+url : "http://office.suratmunicipal.org/LMS/Search"
+Browser : "Chrome"
+Library : '//select[@id="drpLibrary"]'
+Library_select : "NARMAD CENTRAL LIBRARY"
+Classification : '//select[@id="drpClassification"]'
+Classification_select : '2'
+Book_name : '//input[@id="txtSearchBy"]'
+Book : "GAZAL SUCHI SANDARBH"
+Book_Search : '//button[@id="btnSearch"]'
+HelloAll: 'Hi'
